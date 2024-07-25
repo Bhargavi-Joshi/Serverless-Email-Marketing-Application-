@@ -55,4 +55,4 @@ This serverless email marketing application leverages AWS cloud services to send
 
 ## Results
 - Verify email delivery by checking your inbox at the designated time.
-![Result](Email.jpg)
+![Result](email.jpg)
