@@ -3,6 +3,7 @@
 This serverless email marketing application leverages AWS cloud services to send tailored emails to a contact list. The solution employs AWS Lambda, Amazon S3, AWS SES, Amazon EventBridge, and IAM to deliver a scalable and cost-efficient system.
 
 ## Architecture
+
 ![Architecture Diagram](Architecture_Diagram.jpg)
 
 ## Features
@@ -55,4 +56,7 @@ This serverless email marketing application leverages AWS cloud services to send
 
 ## Results
 - Verify email delivery by checking your inbox at the designated time.
+  
 ![Result](email.png)
+
+
