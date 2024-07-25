@@ -1,1 +1,1 @@
-# Serverless-Email-Marketing-Application-
+# Serverless-Email-Marketing-Application
