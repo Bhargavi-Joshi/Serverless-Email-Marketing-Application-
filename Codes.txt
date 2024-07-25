@@ -1,20 +1,15 @@
-﻿Lambda Function Python Code
-
+# Lambda Function Python Code
 
 import boto3
 import csv
-
 
 # Initialize the boto3 client
 s3_client = boto3.client('s3')
 ses_client = boto3.client('ses')
 
-
 def lambda_handler(event, context):
     # Specify the S3 bucket name
-    bucket_name = 'ttt-email-marketing' # Replace with your bucket name
-
-
+    bucket_name = 'bucket-email-marketing' 
     try:
         # Retrieve the CSV file from S3
         csv_file = s3_client.get_object(Bucket=bucket_name, Key='contacts.csv')
@@ -33,10 +28,10 @@ def lambda_handler(event, context):
             
             # Send the email using SES
             response = ses_client.send_email(
-                Source='you@yourdomainname.com',  # Replace with your verified "From" address
+                Source='you@yourdomainname.com',  # Replace with your source email address
                 Destination={'ToAddresses': [contact['Email']]},
                 Message={
-                    'Subject': {'Data': 'Your Weekly Tiny Tales Mail!', 'Charset': 'UTF-8'},
+                    'Subject': {'Data': 'AWS News!', 'Charset': 'UTF-8'},
                     'Body': {'Html': {'Data': personalized_email, 'Charset': 'UTF-8'}}
                 }
             )
@@ -46,14 +41,7 @@ def lambda_handler(event, context):
 
 
 
-
-
-
-________________
-
-
-Lambda Function Test Event
-
+# Lambda Function Test Event
 
 {
   "comment": "Generic test event for scheduled Lambda execution. The function does not use this event data.",
@@ -62,15 +50,9 @@ Lambda Function Test Event
 
 
 
+# IAM Policy for SES and S3 permissions
 
-
-
-IAM Policy for SES and S3 permissions
-
-
-Update the ARN to use your S3 bucket
-
-
+# Update the ARN to use your S3 bucket
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -79,7 +61,7 @@ Update the ARN to use your S3 bucket
             "Action": [
                 "s3:GetObject"
             ],
-            "Resource": "arn:aws:s3:::ttt-email-marketing/*"
+            "Resource": "arn:aws:s3:::bucket-email-marketing/*"
         },
         {
             "Effect": "Allow",
