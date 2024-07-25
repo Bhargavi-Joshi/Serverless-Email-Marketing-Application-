@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            max-width: 75%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #232f3e;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            color: #232f3e;
+        }
+        .content p {
+            line-height: 1.6;
+        }
+        .footer {
+            background-color: #232f3e;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff9900;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AWS Cloud News</h1>
+        </div>
+        <div class="content">
+            <p>Hello {{FirstName}},</p>
+            <h2>Welcome to AWS Cloud Newsletter!</h2>
+            <p>Stay updated with the latest news, features, and tips about Amazon Web Services (AWS). Explore how AWS can help you with cloud computing, storage, databases, machine learning, and more.</p>
+            <h2>Featured Services</h2>
+            <h3>Amazon EC2</h3>
+            <p>Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity in the AWS cloud. Using Amazon EC2 eliminates your need to invest in hardware upfront, so you can develop and deploy applications faster.</p>
+            <h3>Amazon S3</h3>
+            <p>Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. This means customers of all sizes and industries can use it to store and protect any amount of data.</p>
+            <h3>AWS Lambda</h3>
+            <p>AWS Lambda lets you run code without provisioning or managing servers. You pay only for the compute time you consume. With Lambda, you can run code for virtually any type of application or backend service, all with zero administration.</p>
+            <div class="button-container">
+                <a href="https://aws.amazon.com/console/" target="_blank">Visit Website</a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 AWS Cloud News. All rights reserved.</p>
+            <p><a href="https://aws.amazon.com/">Visit our website</a> | <a href="https://aws.amazon.com/contact-us/">Contact Us</a></p>
+        </div>
+    </div>
+</body>
+</html>
